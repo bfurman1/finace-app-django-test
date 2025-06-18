@@ -11,7 +11,7 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-settings_module = 'finance_project.deployment' if 'WEBSITE_HOSTNAME' in os.environ else 'finance_project.settings'
+settings_module = 'finance_project.production' if 'WEBSITE_HOSTNAME' in os.environ else 'finance_project.settings'
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE",settings_module)
 
